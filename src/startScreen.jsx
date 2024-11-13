@@ -46,7 +46,8 @@ const backgroundStyle = {
   display: "flex", // Optional: Flex display to center your content
   alignItems: "center", // Optional: Center content vertically
   justifyContent: "center", // Optional: Center content horizontally
-  color: "white", // Optional: Text color for contrast
+  //color: "white", // Optional: Text color for contrast
+  flexDirection: "column", // Placera innehåll vertikalt
 };
 
 // Denna styling omringar all text på första skärmen
@@ -74,7 +75,7 @@ const subtitleStyle = {
 
 //Inställningar för "frågetecken-knappen"
 const overlayButtonStyle = {
-  // Här är lite bakgrundsdesign
+  // Här är lite bakgrundsdesign , denna krånglar lite har jag märkt, ibalnd syns den och ibland inte
   backgroundColor: "purple",
   padding: "40px",
   borderRadius: 150,
@@ -95,7 +96,7 @@ const buttonStyle = {
   padding: "10px 20px",
   fontSize: "16px",
   cursor: "pointer",
-  backgroundColor: "#4CAF50",
+  backgroundColor: "purple",
   color: "white",
   border: "none",
   borderRadius: "4px",
