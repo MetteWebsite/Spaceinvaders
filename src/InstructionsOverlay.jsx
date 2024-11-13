@@ -1,5 +1,6 @@
 import React from "react";
 
+// Här kan man ändra innehållet på vad som ska vara med på overlayn
 function InstructionsOverlay({ onClose }) {
   return (
     <div style={overlayStyle}>

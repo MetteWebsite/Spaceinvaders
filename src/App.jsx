@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import StartScreen from "./startScreen";
 
+// Denna kommer vi inte behöva ändra så mycket
 const App = () => {
   const [currentScreen, setCurrentScreen] = useState("start"); // Kontrollera vilken skärm som visas
 
