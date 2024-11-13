@@ -41,13 +41,14 @@ const backgroundStyle = {
   color: "white",
 };
 
+//stylea pausknappen
 const pauseButtonStyle = {
   position: "absolute",
-  top: "10px",
-  right: "10px",
+  top: "30px",
+  right: "30px",
   background: "transparent",
   border: "none",
-  fontSize: "24px",
+  fontSize: "50px",
   cursor: "pointer",
   color: "white",
 };
