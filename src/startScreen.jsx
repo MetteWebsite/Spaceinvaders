@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Define your component
 function StartScreen() {
+  const [showInstructions, setShowInstructions] = useState(false);
+
   return (
     <div style={backgroundStyle}>
+      <button style={buttonStyle} onClick={() => setShowInstructions(true)}>
+        ?
+      </button>
+      {showInstructions && (
+        <InstructionsOverlay onClose={() => setShowInstructions(false)} />
+      )}
       <div style={textContainerStyle}>
         <h1 style={titleStyle}>Course Slayer</h1>
         <h2 style={subtitleStyle}>stay sharp, slay smart</h2>
@@ -44,10 +52,23 @@ const titleStyle = {
   fontSize: "90px", // Sets the font size
 };
 
+// Inställnninggar för stay sharp, slay smart texten
 const subtitleStyle = {
   color: "black",
   fontFamily: "Courier New",
   fontSize: "40px", // Sets the font size
+};
+
+//Inställningar för "frågetecken-knappen"
+const buttonStyle = {
+  position: "absolute",
+  top: "10px",
+  right: "10px",
+  background: "transparent",
+  border: "none",
+  fontSize: "24px",
+  cursor: "pointer",
+  color: "white",
 };
 
 export default StartScreen;
