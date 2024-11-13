@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import InstructionsOverlay from "./InstructionsOverlay"; // Kontrollera att detta är rätt path
 
 // Define your component
 function StartScreen() {
