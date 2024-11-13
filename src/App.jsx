@@ -1,24 +1,21 @@
-import React, { useState } from "react";
+// Denna app.jsx behöver vi oftast endast uppdatera ifall vi lägger till navigering till en ny jsx fil
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import StartScreen from "./startScreen";
+import GameScreen from "./GameScreen";
+import EndScreen from "./EndScreen"; // Importera EndScreen
 
-// Denna kommer vi inte behöva ändra så mycket
-const App = () => {
-  const [currentScreen, setCurrentScreen] = useState("start"); // Kontrollera vilken skärm som visas
-
-  const startGame = () => {
-    setCurrentScreen("game");
-  };
-
-  const goToStartScreen = () => {
-    setCurrentScreen("start");
-  };
-
+function App() {
   return (
-    <div className="App">
-      {currentScreen === "start" && <StartScreen onStart={startGame} />}
-      {currentScreen === "game" && <Game onBack={goToStartScreen} />}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<StartScreen />} />
+        <Route path="/game" element={<GameScreen />} />
+        <Route path="/end" element={<EndScreen />} />{" "}
+        {/* Ny väg för EndScreen */}
+      </Routes>
+    </Router>
   );
-};
+}
 
 export default App;

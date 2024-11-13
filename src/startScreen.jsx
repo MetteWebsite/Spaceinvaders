@@ -1,13 +1,22 @@
 import React, { useState } from "react";
 import InstructionsOverlay from "./InstructionsOverlay"; // Kontrollera att detta är rätt path
+import { useNavigate } from "react-router-dom"; // Importera för navigation
 
 // Define your component
 function StartScreen() {
   const [showInstructions, setShowInstructions] = useState(false);
+  const navigate = useNavigate(); // Hook för att navigera
+
+  const handleStartGame = () => {
+    navigate("/game"); // Navigera till spelet
+  };
 
   return (
     <div style={backgroundStyle}>
-      <button style={buttonStyle} onClick={() => setShowInstructions(true)}>
+      <button
+        style={overlayButtonStyle}
+        onClick={() => setShowInstructions(true)}
+      >
         ?
       </button>
       {showInstructions && (
@@ -19,6 +28,9 @@ function StartScreen() {
 
         {/* Add other content here as needed */}
       </div>
+      <button style={buttonStyle} onClick={handleStartGame}>
+        Starta spel
+      </button>
     </div>
   );
 }
@@ -61,7 +73,7 @@ const subtitleStyle = {
 };
 
 //Inställningar för "frågetecken-knappen"
-const buttonStyle = {
+const overlayButtonStyle = {
   // Här är lite bakgrundsdesign
   backgroundColor: "purple",
   padding: "40px",
@@ -76,6 +88,17 @@ const buttonStyle = {
   fontSize: "50px",
   cursor: "pointer",
   color: "white",
+};
+
+const buttonStyle = {
+  marginTop: "20px",
+  padding: "10px 20px",
+  fontSize: "16px",
+  cursor: "pointer",
+  backgroundColor: "#4CAF50",
+  color: "white",
+  border: "none",
+  borderRadius: "4px",
 };
 
 export default StartScreen;
