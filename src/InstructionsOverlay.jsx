@@ -1,5 +1,3 @@
-// InstructionsOverlay.jsx
-
 import React from "react";
 
 function InstructionsOverlay({ onClose }) {

@@ -61,12 +61,18 @@ const subtitleStyle = {
 
 //Inställningar för "frågetecken-knappen"
 const buttonStyle = {
+  // Här är lite bakgrundsdesign
+  backgroundColor: "purple",
+  padding: "40px",
+  borderRadius: 150,
+
+  // Resterande design för frågetecknet sjäälvt
   position: "absolute",
-  top: "10px",
-  right: "10px",
+  top: "30px",
+  right: "30px",
   background: "transparent",
   border: "none",
-  fontSize: "24px",
+  fontSize: "50px",
   cursor: "pointer",
   color: "white",
 };
