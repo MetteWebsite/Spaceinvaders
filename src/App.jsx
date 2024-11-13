@@ -1,10 +1,23 @@
-import { useState } from "react";
-import "./App.css";
+import React, { useState } from "react";
+import StartScreen from "./startScreen";
 
-function App() {
-  const [count, setCount] = useState(0);
+const App = () => {
+  const [currentScreen, setCurrentScreen] = useState("start"); // Kontrollera vilken skärm som visas
 
-  return <></>;
-}
+  const startGame = () => {
+    setCurrentScreen("game");
+  };
+
+  const goToStartScreen = () => {
+    setCurrentScreen("start");
+  };
+
+  return (
+    <div className="App">
+      {currentScreen === "start" && <StartScreen onStart={startGame} />}
+      {currentScreen === "game" && <Game onBack={goToStartScreen} />}
+    </div>
+  );
+};
 
 export default App;
