@@ -8,3 +8,5 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 # Spaceinvaders
 Här under kan vi förklara vad det är för spel vi håller på att tillverka
+![image](https://github.com/user-attachments/assets/4a164c3d-43fc-4b57-ac39-12062f7fb9a2)
+
