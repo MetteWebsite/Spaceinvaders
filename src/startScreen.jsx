@@ -13,6 +13,15 @@ function StartScreen() {
 
   return (
     <div style={backgroundStyle}>
+      {/*Laddade ner en font style och döpte den till Pixelfont. Nu har subtitlen den fonten :) */ }
+           <style>
+        {`
+          @font-face {
+            font-family: 'PixelFont';
+            src: url('src/assets/pixeboy-font/Pixeboy-z8XGD.ttf') format('truetype'); // Adjust the path according to your file location
+          }
+        `}
+      </style>
       <button
         style={overlayButtonStyle}
         onClick={() => setShowInstructions(true)}
@@ -53,24 +62,26 @@ const backgroundStyle = {
 // Denna styling omringar all text på första skärmen
 const textContainerStyle = {
   //backgroundColor: "rgba(0, 0, 0, 0.5)", // denna kan man använda sig av för att veta vart textcontainer området är
-  padding: "20px",
+  padding: "10px",
   borderRadius: "8px",
   textAlign: "center",
+  
 };
 
 const titleStyle = {
   color: "blue",
-  fontFamily: "Impact", //leta efter bättre font
+  fontFamily: "PixelFont", //leta efter bättre font
   //fontStyle: "bold",
   textTransform: "uppercase", // Optional: Transforms text to uppercase
-  fontSize: "90px", // Sets the font size
+  fontSize: "100px", // Sets the font size
 };
 
 // Inställnninggar för stay sharp, slay smart texten
 const subtitleStyle = {
-  color: "black",
-  fontFamily: "Courier New",
-  fontSize: "40px", // Sets the font size
+  color: "#E0218A",
+  fontFamily: "PixelFont",
+  fontSize: "50px", // Sets the font size
+  
 };
 
 //Inställningar för "frågetecken-knappen"
