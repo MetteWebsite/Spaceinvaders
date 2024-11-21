@@ -194,7 +194,7 @@ function GameScreen() {
             left: `${bulletPosition}%`, // Skottets horisontella position
             width: "5px",
             height: "10px",
-            backgroundColor: "red",
+            backgroundColor: "white",
             transition: "bottom 0.1s", // Lägger till en smidig rörelse för skottet
           }}
         />
@@ -237,8 +237,8 @@ const pauseButtonStyle = {
 const playerStyle = {
   position: "absolute",
   bottom: "10%", // Placerar spelaren nära botten
-  width: "60px", // Spelarens bredd
-  height: "60px", // Spelarens höjd
+  width: "500px", // Spelarens bredd
+  height: "300px", // Spelarens höjd
 };
 
 // Böckernas stil
