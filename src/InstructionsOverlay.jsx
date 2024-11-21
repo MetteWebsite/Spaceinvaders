@@ -19,7 +19,7 @@ function InstructionsOverlay({ onClose }) {
         {/*Instruktionerna är tillfälliga men jag har stylat dem lite*/}
         <h2 style={titleStyle}>Game Instructions</h2>
         <ul>
-          <li style={instStyle}>Shoot as many books as fast as you can </li>
+          <li style={instStyle}>Shoot down as many books as fast as you can! </li>
           <li style={instStyle}>To Shoot: Use the upper arrow ⬆️ or the spacebar   𓈙 </li>
           <li style={instStyle}>To Move: Use the left and right arrows ⬅️➡️</li>
           
