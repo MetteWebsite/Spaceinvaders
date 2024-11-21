@@ -5,10 +5,21 @@ import { useNavigate } from "react-router-dom"; // Importera för navigation
 // Define your component
 function StartScreen() {
   const [showInstructions, setShowInstructions] = useState(false);
+  const [showContent, setShowContent] = useState(true); // Ny state för att visa/dölja både text och startknapp
   const navigate = useNavigate(); // Hook för att navigera
 
   const handleStartGame = () => {
     navigate("/game"); // Navigera till spelet
+  };
+
+  const handleInstructionsClick = () => {
+    setShowContent(false); // Dölj både text och startknapp när instruktionsknappen trycks
+    setShowInstructions(true);
+  };
+
+  const handleCloseInstructions = () => {
+    setShowContent(true); // Visa både text och startknapp igen när instruktionerna stängs
+    setShowInstructions(false);
   };
 
   return (
@@ -134,20 +145,26 @@ function StartScreen() {
         `}
       </style>
 
-      <button className="button-instructions" onClick={() => setShowInstructions(true)}>
+      <button className="button-instructions" onClick={handleInstructionsClick}>
         ?
       </button>
 
       {showInstructions && (
-        <InstructionsOverlay onClose={() => setShowInstructions(false)} />
+        <InstructionsOverlay onClose={handleCloseInstructions} />
       )}
-      <div style={textContainerStyle}>
-        <h1 style={titleStyle}>Course Slayer</h1>
-        <h2 style={subtitleStyle}>stay sharp, slay smart</h2>
-      </div>
-      <button className="button-start" onClick={handleStartGame}>
-        START
-      </button>
+
+      {showContent && ( // Både text och startknapp visas endast om showContent är true
+        <div style={textContainerStyle}>
+          <h1 style={titleStyle}>Course Slayer</h1>
+          <h2 style={subtitleStyle}>stay sharp, slay smart</h2>
+        </div>
+      )}
+
+      {showContent && ( // Startknappen visas endast om showContent är true
+        <button className="button-start" onClick={handleStartGame}>
+          START
+        </button>
+      )}
     </div>
   );
 }
@@ -178,7 +195,6 @@ const titleStyle = {
   fontFamily: "PixelFont",
   textTransform: "uppercase",
   fontSize: "100px",
-  marginBottom: "-50px"
 };
 
 // Subtitle-styling

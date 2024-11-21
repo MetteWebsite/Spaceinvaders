@@ -18,12 +18,12 @@ function InstructionsOverlay({ onClose }) {
         </button>
         {/*Instruktionerna är tillfälliga men jag har stylat dem lite*/}
         <h2 style={titleStyle}>Game Instructions</h2>
-        <ul>
-          <li style={instStyle}>Shoot down as many books as fast as you can! </li>
-          <li style={instStyle}>To Shoot: Use the upper arrow ⬆️ or the spacebar   𓈙 </li>
-          <li style={instStyle}>To Move: Use the left and right arrows ⬅️➡️</li>
+        <div>
+          <div style={instStyle}>Shoot down as many books as fast as you can! </div>
+          <div style={instStyle}>To Shoot: Use the upper arrow ⬆️ or the spacebar   𓈙 </div>
+          <div style={instStyle}>To Move: Use the left and right arrows ⬅️➡️</div>
           
-        </ul>
+        </div>
       </div>
     </div>
   );
@@ -36,7 +36,7 @@ const overlayStyle = {
   left: "0",
   width: "100vw", //vw är egentligen bättre att använda en px, som mått
   height: "100vh",
-  backgroundColor: "rgba(0, 0, 0, 0.93)", // Transparent svart bakgrund
+  backgroundColor: "rgba(0, 0, 0, 0.9)", // Transparent svart bakgrund
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -49,7 +49,7 @@ const contentStyle = {
   //backgroundColor: "rgba(0, 0, 0, 0.9)", // Mörk bakgrund för textområdet
   padding: "20px",
   borderRadius: "8px",
-  maxWidth: "600px",
+  maxWidth: "700px",
   textAlign: "center",
   color: "white", // Vit text för bättre kontrast
 };
@@ -57,29 +57,26 @@ const contentStyle = {
 // Denna stylar stängningsknappen
 const closeButtonStyle = {
   position: "absolute",
-  top: "10px",
+  top: "20px",
   right: "40px",
   background: "transparent",
   border: "none",
   fontSize: "60px",
-  color: "red",
+  color: "#007bff",
   cursor: "pointer",
-  
   
 };
 //Inställningar för "Game instructions"
 const titleStyle = {
   color: "#E0218A",
   fontFamily: "PixelFont",
-  fontSize: "50px", // Sets the font size
-  
+  fontSize: "78px", // Sets the font size
 };
 //Inställningar för instruktionerna under game instructions
 const instStyle = {
   color: "white",
   fontFamily: "PixelFont",
   fontSize: "30px", // Sets the font size
-  
 };
 
 export default InstructionsOverlay;

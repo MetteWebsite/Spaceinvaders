@@ -4,12 +4,12 @@ function PauseOverlay({ onClose, onEndGame }) {
   return (
     <div style={overlayStyle}>
       <div style={contentStyle}>
-        <h2>Paus</h2>
+        <h2>Game paused</h2>
         <button style={buttonStyle} onClick={onClose}>
-          Fortsätt Spel
+          Continue
         </button>
         <button style={buttonStyle} onClick={onEndGame}>
-          Avbryt Spel
+          Cancel
         </button>
       </div>
     </div>
