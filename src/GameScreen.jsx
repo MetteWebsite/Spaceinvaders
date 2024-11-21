@@ -25,7 +25,7 @@ function GameScreen() {
       {/* Lägg till spelkomponenter och innehåll här */}
       {/*Player element*/ }
         <img
-        src={"src/assets/player.png"} // Path to player image
+        src={"src/assets/player.png"}
         alt="Player"
         style={playerStyle}
         />
